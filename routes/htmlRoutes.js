@@ -5,7 +5,7 @@ module.exports = function (app) {
 
     // Root
     app.get('/', function (req, res) {
-        res.send('Root HTML Placeholder');
+        res.render('index');
     });
 
     // Saved Articles
