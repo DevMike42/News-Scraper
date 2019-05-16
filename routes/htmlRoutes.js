@@ -15,8 +15,14 @@ module.exports = function (app) {
     });
 
     // Saved Articles
-    app.get('/savedarticles', function (req, res) {
-        res.send('Saved HTML Placeholder');
+    app.get("/savedarticle", function (req, res) {
+        // saved the fetched article to mongodb
+        db.SavedArticle.find({}).populate("note").then(function (dbSavedArticles) {
+            console.log(dbSavedArticles);
+            res.render("saved", { data: dbSavedArticles, home: false });
+        }).catch(function (err) {
+            console.log(err);
+        });
     });
 
     // 404 for unmatching url routes

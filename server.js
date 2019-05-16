@@ -23,14 +23,14 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Routes
-// require('./routes/apiRoutes')(app);
+require('./routes/apiRoutes')(app);
 require('./routes/htmlRoutes')(app);
 
 // Connect to MongoDB
-let MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/scraper';
+let MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/newsScraper';
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // start server
 app.listen(PORT, () => {
-    console.log('App running on http://localhost:', PORT);
+    console.log('App running on http://localhost%s:', PORT);
 });
