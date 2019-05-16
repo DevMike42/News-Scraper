@@ -9,7 +9,36 @@ module.exports = function (app) {
 
     // ========== Scraping Routes ==========
 
-    // TODO: Scrape data and save to DB
+    // Scrape data and save to DB
+    app.get("/scrape", function (req, res) {
+
+        axios.get("https://www.studentnewsdaily.com/").then(function (response) {
+            // Initialize cheerio
+            let $ = cheerio.load(response.data);
+
+            // find data you want to scrape via element selectors
+            $("div.caption").each(function (i, element) {
+                let result = {};
+                // save the data into result object
+                result.title = $(this).children("h4").children("a").text();
+                result.summary = $(this).children("p").text();
+                result.link = $(this).children("h4").children("a").attr("href");
+
+                // saved the fetched article to Article Collection
+                db.Article.create(result).then(function (dbArticle) {
+                    console.log(dbArticle);
+                    res.redirect("/");
+
+                }).catch(function (err) {
+                    console.log(err);
+                });
+
+            });
+        }).catch(function (err) {
+            console.log(err);
+        });
+
+    });
 
 
     // ========== Article Routes ==========
