@@ -24,9 +24,11 @@ module.exports = function (app) {
                 result.summary = $(this).children("p").text();
                 result.link = $(this).children("h4").children("a").attr("href");
 
+                console.log("RESULT " + result);
                 // saved the fetched article to Article Collection
                 db.Article.create(result).then(function (dbArticle) {
                     console.log(dbArticle);
+                    console.log("WUUUUUUUUTUUUUUP!");
                     res.redirect("/");
 
                 }).catch(function (err) {
@@ -46,7 +48,7 @@ module.exports = function (app) {
     // GET (Get all Articles)
     app.get("/api/article/all", function (req, res) {
         db.Article.find({}).then(function (dbArticles) {
-            res.srcon(dbArticles);
+            res.json(dbArticles);
         }).catch(function (err) {
             res.json(err);
         });
