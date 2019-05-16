@@ -1,6 +1,8 @@
 # News-Scraper
 HW 18 - All the News That's Fit to Scrape - MongoDB/Mongoose
 
+**Having trouble with errors when deploying to Heroku. In the meantime, please clone the repo, `cd News-Scraper`, `npm install`, and `npm start`**
+
 Heroku link: https://blooming-retreat-72195.herokuapp.com/
 
 ### Overview
