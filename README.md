@@ -1,9 +1,12 @@
 # News-Scraper
 HW 18 - All the News That's Fit to Scrape - MongoDB/Mongoose
 
-**Having trouble with errors when deploying to Heroku. In the meantime, please clone the repo, `cd News-Scraper`, `npm install`, run `mongod`, and `npm start`**
+**Having trouble with errors when deploying to Heroku. Recieving H12 erors regarding long running requests. Looking into including a Timeout on requests** 
 
-Heroku link: https://blooming-retreat-72195.herokuapp.com/
+**In the meantime, please clone the repo, `cd News-Scraper`, `npm install`, run `mongod`, and `npm start`**
+
+[Heroku](https://warm-anchorage-31417.herokuapp.com/) link
+
 
 ### Overview
 
