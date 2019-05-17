@@ -1,0 +1,20 @@
+body {
+    background-color: #e9ecef;
+}
+
+#scroller {
+    max-height: 450px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.theArticle {
+    max-width: 800px;
+}
+
+
+#note-wrapper {
+    max-height: 250px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
