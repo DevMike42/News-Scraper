@@ -22,9 +22,15 @@
     "cheerio": "^1.0.0-rc.5",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+<<<<<<< HEAD
     "lodash": "^4.17.20",
     "mongoose": "^5.11.13",
     "morgan": "^1.10.0",
+=======
+    "lodash": "^4.17.19",
+    "mongoose": "^5.8.1",
+    "morgan": "^1.9.1",
+>>>>>>> 14b79166a354063bbce22a22b0d5d34e24ec9f89
     "nodemon": "^1.19.4"
   },
   "devDependencies": {
